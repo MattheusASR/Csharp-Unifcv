@@ -1,0 +1,42 @@
+﻿@model aula_4.Models.Matricula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matricula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Aluno.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aluno.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Curso.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Curso.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Turma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Turma)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MatriculaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
